@@ -89,6 +89,12 @@ def platforms = [
                 libExt: 'so'
         ],
         [
+                name  : 'android-arm64',
+                file  : 'zig-aarch64-android.cmake',
+                res   : 'android-aarch64',
+                libExt: 'so'
+        ],
+        [
                 name  : 'macos-x64',
                 file  : 'zig-x86_64-macos.cmake',
                 res   : 'mac-x64',

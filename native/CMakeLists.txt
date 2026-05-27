@@ -35,6 +35,8 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(opus)
 
+set_target_properties(opus PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
 add_library(opus4j SHARED
         src/encoder.c
         src/decoder.c

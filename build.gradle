@@ -1,7 +1,5 @@
 plugins {
     id 'java-library'
-    id 'maven-publish'
-    id 'net.linguica.maven-settings' version "${maven_settings_version}"
 }
 
 group = 'de.maxhenkel.opus4j'
@@ -42,25 +40,6 @@ dependencies {
 
 test {
     useJUnitPlatform()
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-            pom {
-                name = 'Opus4J'
-                description = 'Opus Wrapper for Java'
-                url = 'https://maxhenkel.de'
-            }
-        }
-    }
-    repositories {
-        maven {
-            name = 'henkelmax.public'
-            url = uri('https://maven.maxhenkel.de/repository/public')
-        }
-    }
 }
 
 def platforms = [
